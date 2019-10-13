@@ -1,0 +1,190 @@
+---
+title: "Byron C. Jaeger's resume"
+author: Byron C. Jaeger
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    css: ['css/styles.css', 'resume']
+    self_contained: true
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(
+	message = FALSE,
+	warning = FALSE,
+	include = TRUE,
+  echo = FALSE,
+  results = 'asis'
+)
+
+library(tidyverse)
+library(icon)
+library(glue)
+
+# Set this to true to have links turned into footnotes
+PDF_EXPORT <- FALSE
+
+# Holds all the links that were inserted for footnotes
+links <- c()
+
+source("code/cv_functions.R")
+
+source("code/bind_data.R")
+
+```
+
+
+Aside
+================================================================================
+
+
+![Byron C. Jaeger](images/venice_amanda_and_byron.jpg){width=80%}
+
+Contact {#contact}
+--------------------------------------------------------------------------------
+
+- bcjaeger@uab.edu `r fa_address_book()`
+- [GitHub `r ii_social_github()`](https://github.com/bcjaeger) 
+- [Twitter `r ii_social_twitter()`](https://twitter.com/byron_jaeger) 
+
+
+Skills {#skills}
+--------------------------------------------------------------------------------
+
+**Statistical analysis:**
+
+- Linear mixed models
+- Survival analysis
+
+**Statistical / Machine learning:**
+
+- Clinical risk prediction
+- Missing data
+
+**Statistical Programming:**
+
+- R 
+- C++
+
+Stats {#stats}
+--------------------------------------------------------------------------------
+
+`r read_rds('data/inline/bcj_npubs.rds')`
+
+`r read_rds('data/inline/bcj_ncite.rds')`
+
+`r read_rds('data/inline/bcj_rstats_dl.rds')`
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+This resume was made with the R package [**pagedown**](https://github.com/rstudio/pagedown).
+
+Main
+================================================================================
+
+Byron C. Jaeger {#title}
+--------------------------------------------------------------------------------
+
+I am an Assistant Professor of Biostatistics. I work in the School of Public Health at the University of Alabama at Birmingham. 
+
+My research focuses on describing the role of diurnal (night-time) blood pressure patterns in developing cardiovascular disease and building predictive algorithms that can be used to support clinical decision-making.
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+
+print_section(bcj, 'education')
+
+```
+
+Professional Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+```{r}
+
+print_section(bcj, 'prof_xp')
+
+```
+
+
+Teaching Experience {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+
+print_section(bcj, 'teach_xp')
+
+```
+
+
+Statistical Software {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+
+print_section(bcj, 'r_packs')
+
+```
+
+Publications {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+
+print_section(bcj, 'publications')
+
+```
+
+Presentations {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+
+print_section(bcj, 'presentations')
+
+```
+
+Grants {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+
+print_section(bcj, 'grants')
+
+```
+
+Guest Lectures {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+
+print_section(bcj, 'guest_lec')
+
+```
+
+Peer-Review {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+
+print_section(bcj, 'peer_rev')
+
+```
+
+Current Grant Support {data-icon=clock}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(bcj, 'current_support')
+```
+
+Continuing Education {data-icon=clock}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(bcj, 'education_ctn')
+```

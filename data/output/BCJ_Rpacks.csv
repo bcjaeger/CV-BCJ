@@ -1,0 +1,3 @@
+title,start,subtitle,section,description_1,description_2,in_resume,location,end
+[r2glmm](https://cran.r-project.org/web/packages/r2glmm/index.html),2016,Compute model and semi-partial R-squared for mixed models,r_packs,[GitHub Repository with ReadMe](https://github.com/bcjaeger/r2glmm),"Total downloads as of 2019-10-13: 13,217",FALSE,NA,2016
+[obliqueRSF](https://cran.r-project.org/web/packages/obliqueRSF/index.html),2018,Fit and interpret oblique random survival forests,r_packs,[GitHub Repository with ReadMe](https://github.com/bcjaeger/obliqueRSF),"Total downloads as of 2019-10-13: 2,634",FALSE,NA,2018
