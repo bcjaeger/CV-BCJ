@@ -16,9 +16,15 @@ grants <- read_csv("data/source/BCJ_Grants.csv") %>%
   arrange(desc(date_processed)) %>%
   mutate(
     section = 'grants',
-    subtitle = glue("**Primary Investigator**: {subtitle}"),
+    subtitle = gsub(
+      pattern = 'Jaeger, Byron C.',
+      replacement = '**Jaeger, Byron C.**',
+      x = subtitle,
+      fixed = TRUE
+    ),
+    subtitle = glue("*Primary Investigator:* {subtitle}"),
     in_resume = FALSE,
-    description_1 = glue("**Submitted to**: {description_1}"),
+    description_1 = glue("*Submitted to* {description_1}"),
     end = lubridate::year(date_processed),
     description_2 = if_else(
       condition = !is.na(grant_num),

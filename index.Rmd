@@ -110,7 +110,6 @@ print_section(bcj, 'prof_xp')
 
 ```
 
-
 Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
@@ -119,7 +118,6 @@ Teaching Experience {data-icon=chalkboard-teacher}
 print_section(bcj, 'teach_xp')
 
 ```
-
 
 Statistical Software {data-icon=laptop}
 --------------------------------------------------------------------------------
@@ -148,7 +146,15 @@ print_section(bcj, 'presentations')
 
 ```
 
-Grants {data-icon=laptop}
+Current Support {data-icon=clock}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(bcj, 'current_support')
+```
+
+
+Grants Submitted {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -156,6 +162,7 @@ Grants {data-icon=laptop}
 print_section(bcj, 'grants')
 
 ```
+
 
 Guest Lectures {data-icon=laptop}
 --------------------------------------------------------------------------------
@@ -166,6 +173,14 @@ print_section(bcj, 'guest_lec')
 
 ```
 
+Mentorship {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(bcj, "mentorship")
+```
+
+
 Peer-Review {data-icon=laptop}
 --------------------------------------------------------------------------------
 
@@ -175,12 +190,6 @@ print_section(bcj, 'peer_rev')
 
 ```
 
-Current Grant Support {data-icon=clock}
---------------------------------------------------------------------------------
-
-```{r}
-print_section(bcj, 'current_support')
-```
 
 Continuing Education {data-icon=clock}
 --------------------------------------------------------------------------------

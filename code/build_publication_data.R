@@ -1,19 +1,21 @@
 
 library(scholar)
 library(tidyverse)
+library(glue)
 
 scholar_id = '4IKD_roAAAAJ&hl=en&oi=ao'
 
 # Use google ID to get scholar info
 cites_by_pub <- get_publications(scholar_id) %>%
   as_tibble() %>% 
-  select(ID = pubid, cites = cites) %>% 
+  select(ID = pubid, cites) %>% 
   mutate(ID = as.character(ID))
 
 pubs <- read_csv("data/manual/BCJ_Publications.csv") %>% 
   left_join(cites_by_pub, by = "ID") %>% 
   select(-ID) %>% 
   mutate(
+    cites = if_else(is.na(cites), 0, cites),
     section = 'publications',
     in_resume = FALSE,
     # bolden my name
