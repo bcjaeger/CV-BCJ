@@ -9,8 +9,8 @@ teach_xp,FALSE,General Linear Models,University of Alabama at Birmingham,NA,2019
 teach_xp,FALSE,Statistical Programming with R,University of Alabama at Birmingham,NA,2017,Present,"Students develop core competencies in data analysis (import, clean, transform, visualize, and tabulate) using `R`. ",Course structure promotes interactive lectures and group exercises., Final exam: a comprehensive research project using `R markdown`.,NA,NA,NA
 guest_lec,FALSE,[Reproducible reports with R](https://bcjaeger.github.io/BST-Categorical-RMD/#1),"BST 655, KIRSO statistical lecture",NA,2019,2019,Applied example using data from the titanic cruise,Students were introduced to tibbleOne and rpriori packages,NA,NA,NA,NA
 guest_lec,FALSE,[Using linear models for prediction](https://bcjaeger.github.io/BST-GLM-Prediction/#1),"BST 655, BST 623",NA,2019,2019,Applied example using housing price data,Students introduced to bias-variance tradeoff and resampling,NA,NA,NA,NA
-guest_lec,FALSE,[Introduction to Machine Learning](https://bcjaeger.github.io/Intro-to-ML/#1),"KIRSO statistical lecture, UAB SOPH programming group",NA,2019,2019,Covers core principals in machine learning,Applied examples using data from the Interagency registry for mechanically assisted circulatory support,NA,NA,NA,NA
-mentorship,FALSE,Anastasia Hartzes,Dissertation committee member,NA,2019,Present,Doctorate in Biostatistics,Anastacia is preparing for her final exam,NA,NA,NA,NA
+guest_lec,FALSE,[Introduction to Machine Learning](https://bcjaeger.github.io/Intro-to-ML/#1),"CCTS Friday Fellows talk, KIRSO statistical lecture, UAB SOPH programming group",NA,2019,2019,Covers core principals in machine learning,Applied examples using data from the Interagency registry for mechanically assisted circulatory support,NA,NA,NA,NA
+mentorship,FALSE,Anastasia Hartzes,Dissertation committee member,NA,2019,Present,Doctorate in Biostatistics,Anastasia is preparing for her final exam,NA,NA,NA,NA
 mentorship,FALSE,Steve Ampah,Dissertation co-advisor,NA,2018,Present,Doctorate in Biostatistics,Steve has passed his preliminary exam and is progressing towards graduation,NA,NA,NA,NA
 mentorship,FALSE,Jeremiah Rastegar,BST 698 ,NA,2019,Present,Jeremiah completed online and hands-on training in machine learning,Applied work included predictive modeling using the INTERMACS data registry,NA,NA,NA,NA
 mentorship,FALSE,John Bassler,Graduate research assistant,NA,2019,Present,John has lead an analysis of the RESTORES trial data with Tom Buford,A shiny application is being developed to disseminate this research,NA,NA,NA,NA
@@ -36,4 +36,4 @@ education_ctn,FALSE,Data Science Workflows Using R and Spark,Rick Peterson,Vanco
 education_ctn,FALSE,Statistical Machine Learning for Biomedical Data,Noah Simon,Vancouver,NA,2018,8-hour short course,,,,,
 education_ctn,FALSE,Applied Predictive Analytics,Max Kuhn,"Austin, TX",NA,2019,2-day short course,,,,,
 education_ctn,FALSE,Regression Modeling Strategies,Frank Harrell,"New Orleans, LA",NA,2019,8-hour short course,,,,,
-eductation_ctn,FALSE,Tidy Tools Workshop,Hadley Wickham,"Atlanta, GA",NA,2019,2-day short course,,,,,
+education_ctn,FALSE,Tidy Tools Workshop,Hadley Wickham,"Atlanta, GA",NA,2019,2-day short course,,,,,
