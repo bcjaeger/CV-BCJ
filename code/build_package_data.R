@@ -3,7 +3,7 @@ library(dlstats)
 library(tidyverse)
 library(glue)
 
-my_packages <- c("r2glmm", "obliqueRSF")
+my_packages <- c("r2glmm", "obliqueRSF", "tibbleOne")
 
 linked_packages <- c(
   r2glmm = "[r2glmm](https://cran.r-project.org/web/packages/r2glmm/index.html)",
@@ -26,8 +26,8 @@ start_years <- my_stats %>%
   pull(start) %>% 
   lubridate::year()
 
-start_years <- c(start_years, 2019)
-my_packages <- c(my_packages, 'tibbleOne')
+# start_years <- c(start_years, 2019)
+# my_packages <- c(my_packages, 'tibbleOne')
 
 sub_titles <- tibble(
   title = factor(my_packages, levels = my_packages),
@@ -68,7 +68,7 @@ all_package_summary <- my_stats %>%
   ) %>% 
   glue_data("R package downloads: {total_downloads}")
 
-bcj_packages$description_2[3] <- ""
+# bcj_packages$description_2[3] <- ""
 
 write_csv(bcj_packages, 'data/output/BCJ_Rpacks.csv')
 write_rds(all_package_summary, 'data/inline/bcj_rstats_dl.rds')
