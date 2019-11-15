@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Curriculum Vitae (CV)
+# Curriculum-Vitae (CV)
 
 <!-- badges: start -->
 
@@ -18,7 +18,7 @@ change (e.g., where you went to school, previous jobs, etc.). Then, make
 separate data files for dynamic data, such as your publications and R
 packages.
 
-I am lucy to have access to the University of Alabama Profiles system,
+I am lucky to have access to the University of Alabama Profiles system,
 which allows me to download up-to-date .csv files of my
 grants/publications. This is what creates the files in `data/source`. I
 manually edited the info in those files to create files in `data/manual`

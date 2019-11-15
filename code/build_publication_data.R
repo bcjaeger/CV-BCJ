@@ -11,6 +11,8 @@ cites_by_pub <- get_publications(scholar_id) %>%
   select(ID = pubid, cites) %>% 
   mutate(ID = as.character(ID)) 
 
+cite_summary <- glue("Total citations: {sum(cites_by_pub$cites)}")
+
 pubs <- read_csv("data/manual/BCJ_Publications.csv") %>% 
   left_join(cites_by_pub, by = "ID") %>% 
   select(-ID) %>% 
@@ -45,7 +47,6 @@ pubs <- read_csv("data/manual/BCJ_Publications.csv") %>%
   )
 
 pubs_summary <- glue("Total publications: {nrow(pubs)}")
-cite_summary <- glue("Total citations: {sum(pubs$cites)}")
 
 write_rds(pubs_summary, 'data/inline/bcj_npubs.rds')
 write_rds(cite_summary, 'data/inline/bcj_ncite.rds')

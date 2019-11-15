@@ -1,5 +1,6 @@
 
 library(dlstats)
+library(scholar)
 library(tidyverse)
 library(glue)
 
@@ -16,6 +17,28 @@ git_repos <- c(
   obliqueRSF = "[GitHub Repository with ReadMe](https://github.com/bcjaeger/obliqueRSF)",
   tibbleOne = "[Github Repository with ReadMe](https://github.com/bcjaeger/tibbleOne)"
 )
+
+scholar_id = '4IKD_roAAAAJ&hl=en&oi=ao'
+
+pkg_r2glmm <- c(
+  "Package ‘r2glmm’" = 'r2glmm', 
+  "R2glmm: computes R squared for mixed (multilevel) models" = 'r2glmm', 
+  "r2glmm: Computes R squared for mixed (multilevel) models (LMMs and GLMMs)" = 'r2glmm'
+)
+
+pkg_orsf <- c()
+pkg_tibbleOne <- c()
+pkg_pubs <- c(pkg_r2glmm, pkg_orsf, pkg_tibbleOne)
+
+pub_stats <- get_publications(scholar_id) %>%
+  as_tibble() %>% 
+  filter(title %in% names(pkg_pubs)) %>% 
+  mutate(title = recode(title, !!!pkg_pubs)) %>% 
+  group_by(title) %>% 
+  select(title, cites) %>% 
+  summarise_all(sum) %>% 
+  ungroup() %>% 
+  mutate(title = as.character(title))
 
 my_stats <- cran_stats(my_packages) 
 
@@ -46,19 +69,24 @@ bcj_packages <- my_stats %>%
     last_check = max(end)
   ) %>% 
   rename(title = package) %>% 
-  right_join(sub_titles, by = 'title') %>% 
+  right_join(sub_titles, by = 'title') %>%
+  left_join(pub_stats, by = 'title') %>% 
   mutate(
     title = linked_packages,
     section = 'r_packs',
+    cites = if_else(is.na(cites), 0, cites),
     description_1 = git_repos,
     description_2 = glue(
       "Total downloads as of {last_check}: {total_downloads}"
+    ),
+    description_3 = glue(
+      "Total citations: {cites}"
     ),
     in_resume = FALSE,
     location = NA,
     end = start
   ) %>% 
-  select(-c(total_downloads, last_check))
+  select(-c(total_downloads, last_check, cites))
 
 
 all_package_summary <- my_stats %>% 
