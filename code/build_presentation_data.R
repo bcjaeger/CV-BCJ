@@ -1,5 +1,6 @@
 
 library(tidyverse)
+library(glue)
 library(scholar)
 
 scholar_id = '4IKD_roAAAAJ&hl=en&oi=ao'
